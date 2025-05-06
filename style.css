@@ -37,7 +37,7 @@ nav a:hover {
   background-color: #ff4c8b; 
 }
 .hero {
-  background-image: url("images/bakery-bg.jpg"); /* Make sure the path is correct */
+  background-image: url("hero-bakery.jpg"); /* Make sure the path is correct */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
