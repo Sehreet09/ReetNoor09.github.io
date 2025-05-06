@@ -36,21 +36,37 @@ nav a {
 nav a:hover {
   background-color: #ff4c8b; 
 }
-.hero-img {
-  max-width: 100%;
-  height: auto;  
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.hero {
+  background-image: url("images/bakery-bg.jpg"); /* Make sure the path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* Set height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for better text visibility */
+  z-index: 0;
 }
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 
 .btn {
   padding: 10px 25px;
