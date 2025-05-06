@@ -38,12 +38,11 @@ nav a {
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: url('images/hero-bakery.jpg') center/cover no-repeat;
+  background: url('../images/bakery-bg.jpg') center/cover no-repeat; 
   color: white;
-  background-color: #ffb3c1;
+  background-color: #ffb3c1; /* Light pink */
 }
+
 
 .hero h1 {
   font-size: 3rem;
