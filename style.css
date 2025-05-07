@@ -2,69 +2,64 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #fff5f8;
-  color: #333;
+  background-color: #0D0D2B; /* Deep space navy */
+  color: #F5F5F5; /* Light gray/white text */
   line-height: 1.6;
+  padding: 20px;
 }
-
-/* ================= HEADER & NAVIGATION ================= */
 
 header {
-  background-color: #ff8ebc;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  flex-wrap: wrap;
+h2 {
+  color: #9F6EFF;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 2rem;
+}
+header p {
+  font-size: 1.2rem;
+  color: #CCCCCC;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: white;
-}
-
-.nav-links {
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-.nav-links li a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-  background-color: #ff4c8b;
+nav a:hover {
+  background-color: #0D0D2B; 
 }
-
-/* ================= HERO SECTION ================= */
-
 .hero {
-  background-image: url("hero-bakery.jpg"); /* Ensure this file is in the same folder */
+  background-image: url("hero-bakery.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
-  position: relative;
   padding: 20px;
+  position: relative;
 }
 
 .hero::before {
@@ -74,52 +69,38 @@ header {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for better text visibility */
   z-index: 0;
 }
 
-.hero-text {
+.hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
 
 .btn {
-  padding: 10px 25px;
-  background-color: white;
-  color: #ff4c8b;
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #71c2eb;
+  color: #0D0D2B;
+  padding: 12px 24px;
   border: none;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-size: 1rem;
+  transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: #ffe0ea;
+  background-color: #98F0D6;
+  box-shadow: 0 0 10px #98F0D6;
+  cursor: pointer;
 }
-
-/* ================= MENU SECTION ================= */
 
 section.menu, section.contact {
   padding: 60px 20px;
   text-align: center;
-}
-
-section.menu h2,
-section.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 
 .cards {
@@ -127,28 +108,31 @@ section.contact h2 {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  margin-top: 30px;
 }
 
+
 .card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #1A1A3D;
+  border-radius: 16px;
   padding: 20px;
+  margin: 20px auto;
   max-width: 300px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 12px rgba(58, 190, 255, 0.2);
+  text-align: center;
 }
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
 
 .card:hover {
   transform: translateY(-10px);
 }
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* ================= CONTACT FORM ================= */
 
 form {
   display: flex;
@@ -159,13 +143,11 @@ form {
   gap: 10px;
 }
 
-form input,
-form textarea {
+form input, form textarea {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
 }
 
 form button {
@@ -175,56 +157,23 @@ form button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
 }
-
-form button:hover {
-  background-color: #e63d7a;
-}
-
-/* ================= FOOTER ================= */
 
 footer {
-  background: #ff8ebc;
   text-align: center;
-  padding: 15px;
-  color: white;
-  margin-top: 40px;
-  font-size: 0.95rem;
+  margin-top: 80px;
+  color: #888888;
+  font-size: 0.9rem;
 }
 
-/* ================= RESPONSIVE ================= */
-
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero {
-    height: auto;
-    padding: 60px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .cards {
+  nav ul {
     flex-direction: column;
     align-items: center;
   }
-
-  form {
-    padding: 0 15px;
+  .cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
