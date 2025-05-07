@@ -32,23 +32,34 @@ header p {
 }
 
 nav {
-  background-color: #240046; /* slightly lighter galaxy purple */
-  padding: 15px;
+  background-color: #240046; /* dark purple */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav a {
+.logo {
   color: white;
-  text-decoration: none;
-  margin: 0 15px;
+  font-size: 24px;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: #9d4edd;
+.nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
 }
+
+.nav-links a:hover {
+  color: #c77dff; /* galaxy glow on hover */
+}
+
 
 .hero {
   background-image: url("hero-bakery.jpg"); 
