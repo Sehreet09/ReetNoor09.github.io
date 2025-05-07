@@ -6,10 +6,11 @@
 }
 
 body {
-  background-color: #0D0D2B; /* Deep space navy */
-  color: #F5F5F5; /* Light gray/white text */
-  line-height: 1.6;
-  padding: 20px;
+  background-color: #10002b; /* deep space purple */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -30,23 +31,25 @@ header p {
   margin: 0 auto;
 }
 
-nav ul {
-  list-style: none;
+nav {
+  background-color: #240046; /* slightly lighter galaxy purple */
+  padding: 15px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 5px;
 }
 
 nav a:hover {
-  background-color: #0D0D2B; 
+  color: #9d4edd;
 }
+
 .hero {
   background-image: url("hero-bakery.jpg"); 
   background-size: cover;
@@ -62,20 +65,25 @@ nav a:hover {
   position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for better text visibility */
-  z-index: 0;
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('hero-bakery.jpg') no-repeat center center/cover; 
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
+.hero h1 {
+  font-size: 72px;
+  margin: 0;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 22px;
+  color: white;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 
@@ -157,6 +165,51 @@ form button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+.contact {
+  background-color: #3c096c;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #9d4edd;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.contact input,
+.contact textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.contact button {
+  background-color: #9d4edd;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #c77dff;
 }
 
 footer {
